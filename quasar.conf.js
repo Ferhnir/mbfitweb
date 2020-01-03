@@ -18,7 +18,7 @@ module.exports = function (ctx) {
     // https://github.com/quasarframework/quasar/tree/dev/extras
     extras: [
       // 'ionicons-v4',
-      // 'mdi-v4',
+      'mdi-v4',
       // 'fontawesome-v5',
       // 'eva-icons',
       // 'themify',
@@ -40,9 +40,26 @@ module.exports = function (ctx) {
       //            (fastest compile time; minimum bundle size; most tedious)
       // * true   - Import everything from Quasar
       //            (not treeshaking Quasar; biggest bundle size; convenient)
-      all: 'auto',
+      all: false,
 
-      components: [],
+      components: [
+        'QPageContainer',
+        'QPage',
+        'QLayout',
+        'QHeader',
+        'QToolbar',
+        'QToolbarTitle',
+        'QImg',
+        'QBtn',
+        'QParallax',
+        'QIcon',
+        'QCard',
+        'QCardSection',
+        'QCardActions',
+        'QStepper',
+        'QStep',
+        'QStepperNavigation'
+      ],
       directives: [],
 
       // Quasar plugins
@@ -80,8 +97,8 @@ module.exports = function (ctx) {
     // Full list of options: https://quasar.dev/quasar-cli/quasar-conf-js#Property%3A-devServer
     devServer: {
       https: false,
-      port: 8080,
-      open: true // opens browser window automatically
+      port: 3000,
+      open: false // opens browser window automatically
     },
 
     // animations: 'all', // --- includes all animations

@@ -1,0 +1,23 @@
+<template>
+  <q-header elevated>
+    <q-toolbar class="bg-black glossy text-y">
+      <q-img
+        src="../assets/images/mbfit-logo.jpg"
+        style="height: 38px; max-width: 64px"
+      />
+      <q-toolbar-title>Mbftiness</q-toolbar-title>
+      <q-btn flat round dense icon="menu" class="q-mr-sm" />
+    </q-toolbar>
+  </q-header>
+</template>
+
+<script>
+export default {
+  name: "Navbar"
+};
+</script>
+<style scoped>
+.bg-black {
+  background-color: rgb("0,0,0");
+}
+</style>
