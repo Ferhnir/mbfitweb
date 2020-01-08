@@ -4,6 +4,8 @@
     <intro />
     <yourObjective />
     <achiveYourGoal />
+    <discoverYourPack />
+    <choseYourPack />
     <test />
   </q-layout>
 </template>
@@ -14,6 +16,8 @@ import navbar from "../components/navbar";
 import intro from "../pages/subpages/Intro";
 import yourObjective from "../pages/subpages/yourObjectives";
 import achiveYourGoal from "../pages/subpages/achiveYourGoal";
+import discoverYourPack from "../pages/subpages/discoverYourPack";
+import choseYourPack from "../pages/subpages/chooseYourPack";
 import test from "../pages/subpages/test";
 
 export default {
@@ -23,6 +27,8 @@ export default {
     intro,
     yourObjective,
     achiveYourGoal,
+    discoverYourPack,
+    choseYourPack,
     test
   },
   data() {

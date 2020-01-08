@@ -1,5 +1,5 @@
 <template>
-  <div class="q-page-gaps bg-black text-y q-pt-lg">
+  <div class="bg-black text-y q-pt-lg">
     <div class="row q-pa-md">
       <div class="col-xs-12">
         <p class="text-h3 text-center text-weight-bold">
@@ -7,7 +7,7 @@
         </p>
       </div>
     </div>
-    <div class="row q-pa-md">
+    <div class="row q-pa-md q-page-gaps">
       <div
         v-for="(card, index) in cards"
         :key="index"

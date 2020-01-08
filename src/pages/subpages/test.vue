@@ -1,3 +1,5 @@
 <template>
-  <q-layout>test</q-layout>
+  <q-layout>
+    asdasd
+  </q-layout>
 </template>

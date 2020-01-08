@@ -5,12 +5,12 @@
     header-nav
     flat
     vertical
-    dark
+    light
     ref="stepper"
     active-color="deep-orange"
-    inactive-color="yellow"
+    inactive-color="black"
     active-icon="mdi-arrow-right-bold"
-    style="background: #000 !important; max-width:1024px;"
+    style="background: #fdd247 !important; max-width:1024px;"
   >
     <q-step
       v-for="(el, index) in stepsData"
@@ -18,7 +18,6 @@
       :name="index + 1"
       :prefix="index + 1"
       :title="el.title"
-      :done="done1"
     >
       {{ el.desc }}
     </q-step>
@@ -30,12 +29,16 @@ export default {
   props: ["stepsData"],
   data() {
     return {
-      currentStep: 1,
-      done1: false,
-      done2: false,
-      done3: false,
-      done4: false
+      currentStep: 1
     };
   }
 };
 </script>
+<style>
+.q-stepper__title,
+.q-stepper__tab {
+  font-weight: bold;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+}
+</style>

@@ -5,7 +5,7 @@
         src="../assets/images/mbfit-logo.jpg"
         style="height: 38px; max-width: 64px"
       />
-      <q-toolbar-title>Mbftiness</q-toolbar-title>
+      <q-toolbar-title>Mbfitlifecoaching</q-toolbar-title>
       <q-btn flat round dense icon="menu" class="q-mr-sm" />
     </q-toolbar>
   </q-header>

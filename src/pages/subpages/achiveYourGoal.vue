@@ -1,7 +1,7 @@
 <template>
-  <div class="q-page-gaps bg-black column q-pt-lg">
-    <div class="row q-pa-md">
-      <div class="col-xs-12 text-darker-y">
+  <div class="page-bg-yellow column q-pt-lg">
+    <div class="row q-page-gaps q-pa-md">
+      <div class="col-xs-12 text-lighter-y">
         <p class="text-h3 text-center text-weight-bold">
           ACHIEVE YOUR GOALS IN 4 STEPS
         </p>
@@ -44,8 +44,3 @@ export default {
   })
 };
 </script>
-<style>
-.text-darker-y > * {
-  color: #fdd247 !important;
-}
-</style>
