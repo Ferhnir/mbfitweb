@@ -10,9 +10,11 @@ export default {
 };
 </script>
 <style>
+body {
+  background: #000;
+}
+
 .q-page-gaps {
-  padding-top: 100px;
-  padding-bottom: 100px;
   max-width: 1260px;
   margin: auto;
 }

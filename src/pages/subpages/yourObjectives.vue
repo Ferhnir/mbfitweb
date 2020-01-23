@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-black text-y q-pt-lg">
+  <div class="bg-black text-y q-py-xl">
     <div class="row q-pa-md">
       <div class="col-xs-12">
         <p class="text-h3 text-center text-weight-bold">

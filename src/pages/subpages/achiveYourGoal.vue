@@ -1,17 +1,19 @@
 <template>
-  <div class="page-bg-yellow column q-pt-lg">
-    <div class="row q-page-gaps q-pa-md">
-      <div class="col-xs-12 text-lighter-y">
-        <p class="text-h3 text-center text-weight-bold">
-          ACHIEVE YOUR GOALS IN 4 STEPS
-        </p>
-        <p class="text-h4 text-center">
-          CLARITY OF PURPOSE IS THE ULTIMATE PATH TO SUCCESS
-        </p>
-        <stepper :steps-data="achiveStepData" />
+  <q-layout class="flex flex-center page-bg-yellow column">
+    <div class="q-py-xl">
+      <div class="row q-page-gaps q-pa-md">
+        <div class="col-xs-12 text-lighter-y">
+          <p class="text-h3 text-center text-weight-bold">
+            ACHIEVE YOUR GOALS IN 4 STEPS
+          </p>
+          <p class="text-h4 text-center">
+            CLARITY OF PURPOSE IS THE ULTIMATE PATH TO SUCCESS
+          </p>
+          <stepper :steps-data="achiveStepData" />
+        </div>
       </div>
     </div>
-  </div>
+  </q-layout>
 </template>
 <script>
 import stepper from "../../components/stepper";

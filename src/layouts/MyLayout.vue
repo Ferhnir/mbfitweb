@@ -6,7 +6,7 @@
     <achiveYourGoal />
     <discoverYourPack />
     <choseYourPack />
-    <test />
+    <whoHasMadeIt />
   </q-layout>
 </template>
 
@@ -18,7 +18,7 @@ import yourObjective from "../pages/subpages/yourObjectives";
 import achiveYourGoal from "../pages/subpages/achiveYourGoal";
 import discoverYourPack from "../pages/subpages/discoverYourPack";
 import choseYourPack from "../pages/subpages/chooseYourPack";
-import test from "../pages/subpages/test";
+import whoHasMadeIt from "../pages/subpages/whoHasMadeIt";
 
 export default {
   name: "MyLayout",
@@ -29,7 +29,7 @@ export default {
     achiveYourGoal,
     discoverYourPack,
     choseYourPack,
-    test
+    whoHasMadeIt
   },
   data() {
     return {

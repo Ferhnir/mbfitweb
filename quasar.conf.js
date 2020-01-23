@@ -59,7 +59,17 @@ module.exports = function (ctx) {
         'QCardActions',
         'QStepper',
         'QStep',
-        'QStepperNavigation'
+        'QStepperNavigation',
+        'QList',
+        'QItem',
+        'QItemSection',
+        'QItemLabel',
+        'QSeparator',
+        'QAvatar',
+        'QRating',
+        'QCarousel',
+        'QCarouselControl',
+        'QCarouselSlide'
       ],
       directives: [],
 
@@ -98,7 +108,7 @@ module.exports = function (ctx) {
     // Full list of options: https://quasar.dev/quasar-cli/quasar-conf-js#Property%3A-devServer
     devServer: {
       https: false,
-      port: 3000,
+      port: 80,
       open: false // opens browser window automatically
     },
 
