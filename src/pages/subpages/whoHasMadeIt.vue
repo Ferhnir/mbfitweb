@@ -17,11 +17,10 @@
       >
         <q-carousel-slide
           :name="card.userID"
-          class="column no-wrap flex-center col-12"
+          class="column no-wrap flex-center"
           v-for="(card, index) in testimonialsObj"
           :key="index"
         >
-          <q-icon name="style" size="56px" color="yellow" />
           <q-card class="my-card bg-black text-y q-pt-xl" flat bordered>
             <q-item>
               <q-item-section avatar>

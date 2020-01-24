@@ -1,22 +1,24 @@
 <template>
-  <div class="bg-black text-y q-py-xl">
-    <div class="row q-pa-md">
-      <div class="col-xs-12">
-        <p class="text-h3 text-center text-weight-bold">
-          WHAT IS YOUR OBJECTIVE?
-        </p>
+  <q-layout class="flex flex-center column text-y">
+    <div class="bg-black text-y q-py-xl">
+      <div class="row q-pa-md">
+        <div class="col-xs-12">
+          <p class="text-h3 text-center text-weight-bold">
+            WHAT IS YOUR OBJECTIVE?
+          </p>
+        </div>
+      </div>
+      <div class="row q-pa-md q-page-gaps">
+        <div
+          v-for="(card, index) in cards"
+          :key="index"
+          class="col-xs-12 col-sm-6 col-md-3 col-lg-3 q-pa-md"
+        >
+          <card :card-data="card" />
+        </div>
       </div>
     </div>
-    <div class="row q-pa-md q-page-gaps">
-      <div
-        v-for="(card, index) in cards"
-        :key="index"
-        class="col-xs-12 col-sm-6 col-md-3 col-lg-3 q-pa-md"
-      >
-        <card :card-data="card" />
-      </div>
-    </div>
-  </div>
+  </q-layout>
 </template>
 <script>
 import card from "../../components/card";

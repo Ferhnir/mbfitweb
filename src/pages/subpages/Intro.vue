@@ -2,7 +2,7 @@
   <q-layout class="flex flex-center column text-y">
     <q-parallax src="../../statics/intro_img.jpg" class="parallax">
       <p class="text-h2 text-weight-bold">PERSONAL</p>
-      <p class="text-h3">FITNESS COACHING</p>
+      <p class="text-h3 text-center">FITNESS COACHING</p>
       <p class="text-h6 text-center q-pa-md">
         WE ARE NOT THE SHOUTING TYPE, WE RATHER YOU TEST US BELOW
       </p>
@@ -31,5 +31,8 @@ export default {
 
 .q-parallax__content {
   background-color: rgba(0, 0, 0, 0.6) !important;
+}
+.q-stepper__title {
+  line-height: 24px !important;
 }
 </style>
