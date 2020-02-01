@@ -1,17 +1,19 @@
 <template>
   <q-layout view="lHh Lpr lFf">
-    <navbar />
+    <navbar v-on:changeMenuStatus="updateMenuStatus($event)" />
     <intro />
     <yourObjective />
     <achiveYourGoal />
     <discoverYourPack />
     <choseYourPack />
     <whoHasMadeIt />
+    <menuScreen :menu-screen-status="menuStatus" />
   </q-layout>
 </template>
 
 <script>
 import navbar from "../components/navbar";
+import menuScreen from "../components/menu";
 //subpages
 import intro from "../pages/subpages/Intro";
 import yourObjective from "../pages/subpages/yourObjectives";
@@ -24,6 +26,7 @@ export default {
   name: "MyLayout",
   components: {
     navbar,
+    menuScreen,
     intro,
     yourObjective,
     achiveYourGoal,
@@ -34,7 +37,13 @@ export default {
   data() {
     return {
       // leftDrawerOpen: false
+      menuStatus: false
     };
+  },
+  methods: {
+    updateMenuStatus: status => {
+      this.menuStatus = status;
+    }
   }
 };
 </script>

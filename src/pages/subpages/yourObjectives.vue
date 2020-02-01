@@ -1,5 +1,5 @@
 <template>
-  <q-layout class="flex flex-center column text-y">
+  <q-layout id="yourObjective" class="flex flex-center column text-y">
     <div class="bg-black text-y q-py-xl">
       <div class="row q-pa-md">
         <div class="col-xs-12">

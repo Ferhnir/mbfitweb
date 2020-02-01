@@ -1,5 +1,5 @@
 <template>
-  <q-layout class="flex flex-center page-bg-yellow column">
+  <q-layout id="chooseYourPack" class="flex flex-center page-bg-yellow column">
     <div class="q-py-xl">
       <div class="row q-pa-md">
         <div class="col-xs-12">

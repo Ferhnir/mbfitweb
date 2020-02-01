@@ -69,9 +69,12 @@ module.exports = function (ctx) {
         'QRating',
         'QCarousel',
         'QCarouselControl',
-        'QCarouselSlide'
+        'QCarouselSlide',
+        'QScrollObserver'
       ],
-      directives: [],
+      directives: [
+        'Ripple'
+      ],
 
       // Quasar plugins
       plugins: []

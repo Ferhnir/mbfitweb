@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-black column q-py-xl">
+  <div id="discoverYourPack" class="bg-black column q-py-xl">
     <div class="row q-pa-md">
       <div class="col col-xs-12">
         <p class="text-h3 text-center text-weight-bold text-y">

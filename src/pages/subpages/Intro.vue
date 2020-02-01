@@ -1,5 +1,5 @@
 <template>
-  <q-layout class="flex flex-center column text-y">
+  <q-layout id="intro" class="flex flex-center column text-y">
     <q-parallax src="../../statics/intro_img.jpg" class="parallax">
       <p class="text-h2 text-weight-bold">PERSONAL</p>
       <p class="text-h3 text-center">FITNESS COACHING</p>

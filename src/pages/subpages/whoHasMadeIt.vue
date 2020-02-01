@@ -1,5 +1,5 @@
 <template>
-  <q-layout class="flex flex-center column text-y">
+  <q-layout id="whoHasMadeIt" class="flex flex-center column text-y">
     <div class="bg-black column q-py-xl q-page-gaps">
       <div class="row q-pa-xl">
         <div class="col col-xs-12">
