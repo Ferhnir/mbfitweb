@@ -2,6 +2,9 @@
 .thumbs.db
 node_modules
 
+# own files
+/src/pages/subpages/test.vue
+
 # Quasar core related directories
 .quasar
 /dist

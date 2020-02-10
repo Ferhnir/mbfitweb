@@ -7,7 +7,17 @@
     <discoverYourPack />
     <choseYourPack />
     <whoHasMadeIt />
+    <testXer />
     <menuScreen :menu-screen-status="menuStatus" />
+    <q-btn
+      flat
+      rounded
+      class="back-to-top-btn"
+      icon="mdi-menu-up"
+      size="lg"
+      text-color="yellow"
+      color="black"
+    />
   </q-layout>
 </template>
 
@@ -22,6 +32,8 @@ import discoverYourPack from "../pages/subpages/discoverYourPack";
 import choseYourPack from "../pages/subpages/chooseYourPack";
 import whoHasMadeIt from "../pages/subpages/whoHasMadeIt";
 
+import testXer from "../pages/subpages/test";
+
 export default {
   name: "MyLayout",
   components: {
@@ -32,11 +44,11 @@ export default {
     achiveYourGoal,
     discoverYourPack,
     choseYourPack,
-    whoHasMadeIt
+    whoHasMadeIt,
+    testXer
   },
   data() {
     return {
-      // leftDrawerOpen: false
       menuStatus: false
     };
   },
@@ -47,3 +59,10 @@ export default {
   }
 };
 </script>
+<style>
+.back-to-top-btn {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+}
+</style>
