@@ -7,7 +7,7 @@
     <discoverYourPack />
     <choseYourPack />
     <whoHasMadeIt />
-    <testXer />
+    <aboutMe />
     <menuScreen :menu-screen-status="menuStatus" />
     <q-btn
       flat
@@ -32,7 +32,7 @@ import discoverYourPack from "../pages/subpages/discoverYourPack";
 import choseYourPack from "../pages/subpages/chooseYourPack";
 import whoHasMadeIt from "../pages/subpages/whoHasMadeIt";
 
-import testXer from "../pages/subpages/test";
+import aboutMe from "../pages/subpages/aboutMe";
 
 export default {
   name: "MyLayout",
@@ -45,7 +45,7 @@ export default {
     discoverYourPack,
     choseYourPack,
     whoHasMadeIt,
-    testXer
+    aboutMe
   },
   data() {
     return {
