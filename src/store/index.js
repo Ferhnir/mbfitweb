@@ -2,6 +2,7 @@ import Vue from "vue";
 import Vuex from "vuex";
 
 import menuScreen from "./menuScreen";
+import mailMeBox from "./mailMeBox";
 
 // import example from './module-example'
 
@@ -19,7 +20,8 @@ Vue.use(Vuex);
 export default function(/* { ssrContext } */) {
   const Store = new Vuex.Store({
     modules: {
-      menuScreen
+      menuScreen,
+      mailMeBox
     },
 
     // enable strict mode (adds overhead!)

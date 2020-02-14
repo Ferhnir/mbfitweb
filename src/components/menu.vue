@@ -56,6 +56,17 @@
                 </a>
               </q-item-section>
             </q-item>
+            <q-item>
+              <q-item-section>
+                <a
+                  href="#"
+                  class="text-h6 menu-link q-py-md"
+                  @click="setMailMeBoxState(true)"
+                >
+                  <q-icon name="mdi-mail-ru" size="lg" /> mail me
+                </a>
+              </q-item-section>
+            </q-item>
           </q-list>
         </div>
       </div>
@@ -78,7 +89,6 @@ import { scroll } from "quasar";
 const { getScrollTarget, setScrollPosition } = scroll;
 export default {
   name: "Menu",
-  props: ["menuScreenStatus"],
   data: () => {
     return {
       isActive: false,
@@ -96,11 +106,6 @@ export default {
           icon: "mdi-phone",
           dates: "Moday - Firday",
           times: "7:00 - 12:00"
-        },
-        {
-          name: "eMail",
-          desc: "send message",
-          icon: "mdi-mail-ru"
         }
       ]
     };
@@ -115,6 +120,9 @@ export default {
   methods: {
     setMenuScreenState: function(val) {
       this.$store.commit("menuScreen/updateMenuScreenState", val);
+    },
+    setMailMeBoxState: function(val) {
+      this.$store.commit("mailMeBox/updateMailMeBoxState", val);
     },
     handleScroll(href) {
       const ele = document.getElementById(href);
@@ -141,8 +149,9 @@ export default {
 }
 
 .active {
-  z-index: 100000;
+  z-index: 5000;
   opacity: 0.95;
+  transition: 0.5s;
 }
 
 .menu-screen-close {

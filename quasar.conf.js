@@ -70,7 +70,14 @@ module.exports = function (ctx) {
         'QCarousel',
         'QCarouselControl',
         'QCarouselSlide',
-        'QScrollObserver'
+        'QScrollObserver',
+        'QDialog',
+        'QForm',
+        'QInput',
+        'QToggle',
+        'QTooltip',
+        'QBar',
+        'QSpace'
       ],
       directives: [
         'Ripple'

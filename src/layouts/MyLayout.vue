@@ -8,7 +8,8 @@
     <choseYourPack />
     <whoHasMadeIt />
     <aboutMe />
-    <menuScreen :menu-screen-status="menuStatus" />
+    <menuScreen />
+    <mailMeBox />
     <q-btn
       flat
       rounded
@@ -24,6 +25,7 @@
 <script>
 import navbar from "../components/navbar";
 import menuScreen from "../components/menu";
+import mailMeBox from "../components/mailMeBox";
 //subpages
 import intro from "../pages/subpages/Intro";
 import yourObjective from "../pages/subpages/yourObjectives";
@@ -37,8 +39,11 @@ import aboutMe from "../pages/subpages/aboutMe";
 export default {
   name: "MyLayout",
   components: {
+    //components
     navbar,
     menuScreen,
+    mailMeBox,
+    //subpages
     intro,
     yourObjective,
     achiveYourGoal,
