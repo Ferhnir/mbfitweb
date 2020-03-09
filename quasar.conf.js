@@ -9,7 +9,8 @@ module.exports = function (ctx) {
     // https://quasar.dev/quasar-cli/cli-documentation/boot-files
     boot: [
       'axios',
-      'lodash'
+      'lodash',
+      'notify-defaults'
     ],
 
     // https://quasar.dev/quasar-cli/quasar-conf-js#Property%3A-css
@@ -85,7 +86,12 @@ module.exports = function (ctx) {
       ],
 
       // Quasar plugins
-      plugins: [""]
+      plugins: [
+        'Notify'
+      ],
+      config: {
+        notify: { /* look at QUASARCONFOPTIONS from the API card (bottom of page) */ }
+      }
     },
 
     // https://quasar.dev/quasar-cli/cli-documentation/supporting-ie

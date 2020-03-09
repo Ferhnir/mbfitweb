@@ -125,10 +125,15 @@ export default {
         }
       })
         .then(response => {
-          console.log(response);
+          if (response.status === 200) {
+            this.$store.commit("mailMeBox/updateMailMeBoxState", false);
+            this.$q.notify("Message sent!");
+            this.onReset();
+          }
         })
         .catch(error => {
           console.log(error);
+          this.$q.notify("Error: " + error);
         });
     },
     onReset() {
