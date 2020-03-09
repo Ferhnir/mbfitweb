@@ -88,11 +88,10 @@ export default {
         });
       }
     },
-
     onReset() {
       this.name = null;
       this.age = null;
-      this.accept = false;
+      this.accept = !false;
     }
   }
 };

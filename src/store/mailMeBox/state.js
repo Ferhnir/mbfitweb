@@ -1,5 +1,6 @@
 export default function() {
   return {
-    mailMeBoxState: false
+    mailMeBoxState: false,
+    mailMeBoxToken: null
   };
 }

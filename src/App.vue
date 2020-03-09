@@ -1,12 +1,15 @@
 <template>
-  <div id="q-app">
+  <div id="q-app" :test="item">
     <router-view />
   </div>
 </template>
 
 <script>
 export default {
-  name: "App"
+  name: "App",
+  preFetch({ store }) {
+    return store.dispatch("mailMeBox/registerToken");
+  }
 };
 </script>
 <style>

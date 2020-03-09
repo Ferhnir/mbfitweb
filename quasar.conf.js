@@ -3,6 +3,7 @@
 
 module.exports = function (ctx) {
   return {
+    preFetch: true,
     // app boot file (/src/boot)
     // --> boot files are part of "main.js"
     // https://quasar.dev/quasar-cli/cli-documentation/boot-files
@@ -97,6 +98,9 @@ module.exports = function (ctx) {
       showProgress: true,
       gzip: false,
       analyze: false,
+      uglifyOptions: {
+        compress: { drop_console: true }
+      },
       // Options below are automatically set depending on the env, set them if you want to override
       // preloadChunks: false,
       // extractCSS: false,
@@ -118,7 +122,7 @@ module.exports = function (ctx) {
     // Full list of options: https://quasar.dev/quasar-cli/quasar-conf-js#Property%3A-devServer
     devServer: {
       https: false,
-      port: 3000,
+      port: 3010,
       open: false // opens browser window automatically
     },
 
