@@ -85,7 +85,7 @@ module.exports = function (ctx) {
       ],
 
       // Quasar plugins
-      plugins: []
+      plugins: [""]
     },
 
     // https://quasar.dev/quasar-cli/cli-documentation/supporting-ie
@@ -121,6 +121,10 @@ module.exports = function (ctx) {
 
     // Full list of options: https://quasar.dev/quasar-cli/quasar-conf-js#Property%3A-devServer
     devServer: {
+      before(app) {
+        const cors = require('cors');
+        app.use(cors());
+      },
       https: false,
       port: 3010,
       open: false // opens browser window automatically

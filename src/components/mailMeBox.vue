@@ -1,7 +1,7 @@
 <template>
   <div class="q-pa-md q-gutter-sm">
-    <q-dialog full-width persistent v-model="mailMeBoxState">
-      <q-card>
+    <q-dialog persistent v-model="mailMeBoxState">
+      <q-card style="max-width: 500px; width: 500px;">
         <q-bar dark class="q-mt-md">
           Send me message
           <q-space />
@@ -20,17 +20,57 @@
           <q-form @submit="onSubmit" @reset="onReset" class="q-gutter-md">
             <q-input
               filled
-              v-model="name"
+              v-model="form.user_name"
               label="Your name *"
               hint="Name and surname"
               lazy-rules
               :rules="[
-                val => (val && val.length > 0) || 'Please type something'
+                val => (val && val.length > 0) || 'Please type your name'
               ]"
             />
-            <q-input v-model="email" filled type="email" hint="Email" />
 
-            <q-input v-model="text" filled type="textarea" />
+            <q-input
+              v-model="form.phone"
+              filled
+              type="Mobile"
+              label="Mobile *"
+              hint="Mask: (###) ## ## ###"
+              mask="(###) ## ## ###"
+              unmasked-value
+              lazy-rules
+              :rules="[
+                val =>
+                  (val && val.length > 9) || 'Please type your phone number'
+              ]"
+            />
+
+            <q-input
+              v-model="form.email"
+              filled
+              type="Email"
+              label="Email *"
+              hint="email@domain"
+              unmasked-value
+              lazy-rules
+              :rules="[
+                val =>
+                  (val && $_.includes(val, '@')) || 'Please type your email'
+              ]"
+            />
+
+            <q-input
+              label="Message"
+              v-model="form.text"
+              autogrow
+              filled
+              type="textarea"
+              lazy-rules
+              :rules="[
+                val =>
+                  (val && val.length > 10) ||
+                  'Please tell me what you want to say'
+              ]"
+            />
 
             <div>
               <q-btn label="Submit" type="submit" color="primary" />
@@ -53,11 +93,12 @@ export default {
   name: "mailMeBox",
   data() {
     return {
-      mailMeBox: true,
-      name: null,
-      email: null,
-      text: null,
-      accept: false
+      form: {
+        user_name: null,
+        email: null,
+        phone: null,
+        text: null
+      }
     };
   },
   computed: {
@@ -72,26 +113,29 @@ export default {
       this.$store.commit("mailMeBox/updateMailMeBoxState", val);
     },
     onSubmit() {
-      if (this.accept !== true) {
-        this.$q.notify({
-          color: "red-5",
-          textColor: "white",
-          icon: "warning",
-          message: "You need to accept the license and terms first"
+      this.$axios({
+        method: "POST",
+        url: "contactme/message",
+        headers: {
+          "X-Access-Token":
+            "Bearer " + this.$store.state.mailMeBox.mailMeBoxToken
+        },
+        data: {
+          test: "test"
+        }
+      })
+        .then(response => {
+          console.log(response);
+        })
+        .catch(error => {
+          console.log(error);
         });
-      } else {
-        this.$q.notify({
-          color: "green-4",
-          textColor: "white",
-          icon: "cloud_done",
-          message: "Submitted"
-        });
-      }
     },
     onReset() {
-      this.name = null;
-      this.age = null;
-      this.accept = !false;
+      this.form.user_name = null;
+      this.form.phone = null;
+      this.form.email = null;
+      this.form.text = null;
     }
   }
 };

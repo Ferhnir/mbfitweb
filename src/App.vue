@@ -1,5 +1,5 @@
 <template>
-  <div id="q-app" :test="item">
+  <div id="q-app">
     <router-view />
   </div>
 </template>

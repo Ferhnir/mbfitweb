@@ -15,11 +15,12 @@
     "@mdi/font": "^4.7.95",
     "@quasar/extras": "^1.0.0",
     "axios": "^0.18.1",
+    "cors": "^2.8.5",
     "lodash": "^4.17.15",
     "quasar": "^1.0.0"
   },
   "devDependencies": {
-    "@quasar/app": "^1.0.0",
+    "@quasar/app": "^1.6.0",
     "@vue/eslint-config-prettier": "^4.0.0",
     "babel-eslint": "^10.0.1",
     "eslint": "^5.10.0",

@@ -1,4 +1,3 @@
-// import axios from "axios";
 import { axiosInstance } from "boot/axios";
 
 export function setMailMeBoxToken(state, token) {
@@ -6,7 +5,7 @@ export function setMailMeBoxToken(state, token) {
 }
 
 export function registerToken({ commit }) {
-  return axiosInstance.get("/tokenrequest").then(({ data }) => {
+  return axiosInstance.get("/token/request").then(({ data }) => {
     commit("registerMailMeBoxToken", data);
   });
 }
