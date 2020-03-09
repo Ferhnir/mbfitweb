@@ -131,7 +131,7 @@ module.exports = function (ctx) {
         const cors = require('cors');
         app.use(cors());
       },
-      https: false,
+      https: true,
       port: 3010,
       open: false // opens browser window automatically
     },
