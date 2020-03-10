@@ -7,6 +7,7 @@ node_modules
 
 # Quasar core related directories
 .quasar
+.env
 /dist
 
 # Cordova related directories and files
@@ -35,3 +36,5 @@ yarn-error.log*
 *.ntvs*
 *.njsproj
 *.sln
+
+.env

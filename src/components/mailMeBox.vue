@@ -121,7 +121,7 @@ export default {
             "Bearer " + this.$store.state.mailMeBox.mailMeBoxToken
         },
         data: {
-          test: "test"
+          data: this.form
         }
       })
         .then(response => {
@@ -132,7 +132,7 @@ export default {
           }
         })
         .catch(error => {
-          this.$q.notify("Error: " + error);
+          this.$q.notify(error);
         });
     },
     onReset() {
