@@ -60,21 +60,7 @@ export default {
   background-color: rgb("0,0,0");
 }
 
-#InvPageTitle,
-#PhoneCall,
 #MailMeBox {
-  display: none;
-}
-
-@media only screen and (max-width: 600px) {
-  #PageTitle {
-    display: none;
-  }
-
-  #InvPageTitle,
-  #PhoneCall,
-  #MailMeBox {
-    display: block;
-  }
+  display: block;
 }
 </style>

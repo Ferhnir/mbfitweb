@@ -17,6 +17,10 @@ body {
   background: #000;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 .q-page-gaps {
   max-width: 1260px;
   margin: auto;

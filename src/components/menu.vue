@@ -9,7 +9,7 @@
     >
       <div id="MenuField" class="row justify-center items-top content-stretch">
         <!-- LEFT MENU LIST -->
-        <div id="MenuList" class="col-xs-12 col-sm-12 col-md-6 q-px-md">
+        <div id="MenuList" class="col-xs-12 col-sm-12 col-md-12 q-px-md">
           <div class="text-h3 nav-header" style="margin: auto;">
             Navigation
           </div>
@@ -27,44 +27,6 @@
                   @click="handleScroll(el.href)"
                   >{{ el.name }}</a
                 >
-              </q-item-section>
-            </q-item>
-          </q-list>
-        </div>
-        <!-- RIGHT MENU -->
-        <div id="ContactDetails" class="col-6 q-px-md">
-          <div class="text-h3 nav-header text-right" style="margin: auto;">
-            Contact
-          </div>
-          <q-list padding>
-            <q-item
-              clickable
-              v-ripple
-              v-for="(el, index) in contactList"
-              :key="index"
-            >
-              <q-item-section>
-                <a href="#" class="text-h6 menu-link q-py-md">
-                  <q-icon :name="el.icon" size="lg" /> {{ el.desc }}
-                  <br />
-                  <div class="text-h7" v-if="$_.has(el, 'dates')">
-                    {{ el.dates }}
-                  </div>
-                  <div class="text-h7" v-if="$_.has(el, 'times')">
-                    {{ el.times }}
-                  </div>
-                </a>
-              </q-item-section>
-            </q-item>
-            <q-item>
-              <q-item-section>
-                <a
-                  href="#"
-                  class="text-h6 menu-link q-py-md"
-                  @click="setMailMeBoxState(true)"
-                >
-                  <q-icon name="mdi-mail-ru" size="lg" /> mail me
-                </a>
               </q-item-section>
             </q-item>
           </q-list>
@@ -98,15 +60,6 @@ export default {
         { name: "DISCOVER YOUR PACK", href: "discoverYourPack" },
         { name: "CHOOSE YOUR PACK", href: "chooseYourPack" },
         { name: "ABOUT ME", href: "aboutMe" }
-      ],
-      contactList: [
-        {
-          name: "Mobile",
-          desc: "77777 777 7 7",
-          icon: "mdi-phone",
-          dates: "Moday - Firday",
-          times: "7:00 - 12:00"
-        }
       ]
     };
   },
@@ -128,7 +81,7 @@ export default {
       const ele = document.getElementById(href);
       const target = getScrollTarget(ele);
       const offset = ele.offsetTop;
-      const duration = 100;
+      const duration = 500;
       setScrollPosition(target, offset, duration);
       this.$store.commit("menuScreen/updateMenuScreenState", false);
     }
@@ -141,7 +94,7 @@ export default {
   top: 0;
   right: 0;
   bottom: 0;
-  z-index: -100000;
+  z-index: -1000;
   background-color: #000;
   opacity: 0;
   transition: 0.5s;
@@ -167,12 +120,8 @@ export default {
 }
 
 #MenuList {
-  text-align: left;
+  text-align: center;
   max-width: 550px;
-}
-
-#ContactDetails > * {
-  text-align: right;
 }
 
 .nav-header {
